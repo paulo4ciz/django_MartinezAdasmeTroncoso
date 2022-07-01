@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <title>DECO PLANTS - INICIO</title>
+</head>
+
+<body>
+  <nav class="site-header sticky-top py-1">
+    <div class="container d-flex flex-column flex-md-row justify-content-between ">
+
+      <a class="py-4 d-none d-md-inline-block text-decoration-none" href="{% url 'home' %}">INICIO</a>
+      <a class="py-4 d-none d-md-inline-block text-decoration-none" href="{% url 'about' %}">QUIENES SOMOS</a>
+      <a class="py-4 d-none d-md-inline-block text-decoration-none" href="{% url 'galeria' %}">GALERÍA</a>
+      <a class="py-4 d-none d-md-inline-block text-decoration-none" href="#footer">CONTACTANOS</a>
+      
+      {% if user.is_authenticated %}
+        <a class="py-4 d-none d-md-inline-block text-decoration-none" href="{% url 'listar_productos' %}">LISTAR PRODUCTOS</a>
+        <a class="py-4 d-none d-md-inline-block text-decoration-none" href="{% url 'agregar_producto' %}">AGREGAR PRODUCTOS</a>
+        <a class="py-4 d-none d-md-inline-block text-decoration-none" href="{% url 'logout' %}">CERRAR SESION</a>
+      
+      {% else %}
+      
+        <a class="py-4 d-none d-md-inline-block text-decoration-none" href="{% url 'register' %}">REGISTRATE</a>
+        <a class="py-4 d-none d-md-inline-block text-decoration-none" href="{% url 'login' %}">INICIAR SESION</a>
+      
+      {% endif %}
+
+    </div>
+  </nav>
+  <header class="baner">
+    <a href="galeria.html"> <img src="{% static 'core/img/banerfinal.jpg' %}" class="img-fluid" alt="..."></a>
+  </header>
+  <article class="logoparrafo">
+    <div>
+      <img src="{% static 'core/img/logo.png' %}" class="img-fluid" alt="...">
+    </div>
+  </article>
+  <section class="container">
+
+    <article class="parrafo">
+
+      <div class="parrafo1index">
+
+        <h1>
+          Deco Plants es una empresa creada con el fin de promover el cultivo responsable de plantas de interior, asi
+          mismo promover el auto cultivo
+          y cuidado de estas mismas a la hora de elegir tener plantas con el fin de decorar pequeños rincones de
+          nuestros hogares con estos verdes hermosos.
+
+          Las plantas de interior son un elemento decorativo muy común en los hogares. Dan un toque de color y
+          maximizan la sensación de bienestar. Sobre todo, porque ayudan a purificar el aire y brindarnos cierto
+          ‘soplo fresco de naturaleza’ aún dentro de casa.</h1>
+        <h4>&mdash;CEO decoplants</h4>
+
+      </div>
+    </article>
+
+    <article class="parrafo2">
+      <div class="section full-height over-hide px-4 px-sm-0">
+        <div class="container">
+          <div class="row full-height justify-content-center">
+            <div class="col-lg-10 col-xl-8 align-self-center padding-tb">
+              <div class="section mx-auto text-center slider-height-padding">
+                <input class="checkbox frst" type="radio" id="slide-1" name="slider" checked />
+                <label for="slide-1"></label>
+                <input class="checkbox scnd" type="radio" name="slider" id="slider-2" />
+                <label for="slider-2"></label>
+                <input class="checkbox thrd" type="radio" name="slider" id="slider-3" />
+                <label for="slider-3"></label>
+                <input class="checkbox foth" type="radio" name="slider" id="slider-4" />
+                <label for="slider-4"></label>
+                <ul>
+                  <li>
+                    <span>DISEÑO</span>
+                  </li>
+                  <li>
+                    <span>DECORACIÓN</span>
+                  </li>
+                  <li>
+                    <span>VENTA</span>
+                  </li>
+                  <li>
+                    <span>DELIVERY</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <br>
+  </section>
+  <article class="parrafo2index">
+    <div class="parrafo1index">
+
+      <h3>Plantas de Interior</h3>
+      <h1>
+        Cuando pensamos en tener una planta de interior, se abre un abanico enorme de preguntas tales como: ¿Cuál de
+        todas las tantas plantas quedaría bien en ese sitio?, ¿Cuál me gusta más?, ¿La quiero con flores todo el año?,
+        ¿Quiero plantas purificadoras de aire?, ¿Cuánta cantidad de agua llevan?, ¿Si compramos una planta
+        artificial?,
+        ¿Las voy a sembrar con semillas o voy a comprarla?, ¿Deseo que sea una planta pequeña o grande?. Al final
+        cuando
+        decides tener una planta que te acompañe durante algún tiempo, te haces mil preguntas. Aunque pensándolo bien,
+        quizás piensas esta me va bien y listo.</h1>
+    </div>
+  </article>
+  <section class="container">
+    <div class="titulocomentarios">
+      <h3>Nuestros clientes</h3>
+    </div>
+    <article class="containercomentarios">
+      <div class="comentahrios"></div>
+      <div class="card">
+        <div class="card-header">
+          <img src="{% static 'core/img/planta2.jpg' %}" alt="rover" />
+        </div>
+        <div class="card-body">
+          <span class="tag tag-teal">Diseño</span>
+          <h4>
+            Muy buen servicio, me encanto!
+          </h4>
+          <p>
+            Enamorada de mi planta de interior!, voy por mas!
+          </p>
+          <div class="user">
+            <img src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo"
+              alt="user" />
+            <div class="user-info">
+              <h5>Gabriela</h5>
+              <small>2h atras</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <img src="{% static 'core/img/planta3.jpg' %}" alt="ballons" />
+        </div>
+        <div class="card-body">
+          <span class="tag tag-purple">Estilos</span>
+          <h4>
+            Gran variedad de maseteros!
+          </h4>
+          <p>
+            Encantada con su variedad de masetas!, como tambien con su personal,
+            excelente servicio!
+          </p>
+          <div class="user">
+            <img src="https://lh3.googleusercontent.com/ogw/ADGmqu8sn9zF15pW59JIYiLgx3PQ3EyZLFp5Zqao906l=s32-c-mo"
+              alt="user" />
+            <div class="user-info">
+              <h5>Pombo Da silva</h5>
+              <small>ayer</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <img src="{% static 'core/img/planta1.jpg' %}" alt="city" />
+        </div>
+        <div class="card-body">
+          <span class="tag tag-pink">colores!</span>
+          <h4>
+            Amo las plantitas de colores!
+          </h4>
+          <p>
+            Muy bellas plantas , de todos los colores y tamaños! gracias chicos!
+          </p>
+          <div class="user">
+            <img src="https://studyinbaltics.ee/wp-content/uploads/2020/03/3799Ffxy.jpg" alt="user" />
+            <div class="user-info">
+              <h5>Tamara Bunke</h5>
+              <small>hace una semana</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </section>
+  <div class="contain">
+    <h1>Somos :</h1>
+    <h1>Deco Plants</h1>
+
+  </div>
+  <br>
+  <footer id="footer">
+    <h1 id="titulofooter">
+      Contactanos en nuestras redes
+    </h1>
+    <div id="socials">
+      <a href="https://web.facebook.com/Deco-Plants-108161155177454"> <img class="socialslogo"
+          src="{% static 'core/img/facebook.png' %}" alt="logoface"></a>
+      <a href="https://goo.gl/maps/sDKpmiqVjZyk9FQA7"> <img class="socialslogo" src="{% static 'core/img/google.png' %}"
+          alt="logoinsta"></a>
+      <a href="https://www.instagram.com/deco_plants_amigas/"> <img class="socialslogo"
+          src="{% static 'core/img/instagram.png' %}" alt="logoinsta"></a>
+      <a href="https://twitter.com/?lang=es"><img class="socialslogo" src="{% static 'core/img/twtitter.png' %}"
+          alt="logo twtitter"></a>
+      <a href="https://github.com/paulo4ciz/proyecto_semestral"><img class="socialslogo"
+          src="{% static 'core/img/github.png.png' %}" alt="logoinsta"></a>
+    </div>
+
+    <header class="linksfooter">
+      <div class="headfooter">
+        <div class="hipervinculosfooter">
+          <h2>Servicio al cliente</h2>
+          <a href="{% static 'core/img/mantenimiento-del-sitio-web.jpg' %}">Seguimiento de pedidos</a>
+          <a href="{% static 'core/img/mantenimiento-del-sitio-web.jpg' %}">Terminos y condiciones</a>
+          <a href="{% static 'core/img/mantenimiento-del-sitio-web.jpg' %}">Medios de Pago</a>
+          <a href="{% static 'core/img/mantenimiento-del-sitio-web.jpg' %}">Dejanos tu opninion</a>
+        </div>
+
+        <div class="hipervinculosfooter">
+          <h2>Nuestra Empresa</h2>
+          <a href="{% static 'core/img/mantenimiento-del-sitio-web.jpg' %}">Clientes</a>
+          <a href="{% static 'core/img/mantenimiento-del-sitio-web.jpg' %}">Nuestro team</a>
+          <a href="{% static 'core/img/mantenimiento-del-sitio-web.jpg' %}">Vision y futuro</a>
+          <a href="{% static 'core/img/mantenimiento-del-sitio-web.jpg' %}">Inversionistas y partners</a>
+
+        </div>
+
+        <div class="hipervinculosfooter">
+          <h2>Nuestros Productos</h2>
+          <a href="{% static 'core/img/mantenimiento-del-sitio-web.jpg' %}">Plantas indoor</a>
+          <a href="{% static 'core/img/mantenimiento-del-sitio-web.jpg' %}">Plantas outdoor</a>
+          <a href="{% static 'core/img/mantenimiento-del-sitio-web.jpg' %}">Nuestras semillas</a>
+          <a href="{% static 'core/img/mantenimiento-del-sitio-web.jpg' %}">Como plantar en tu casa</a>
+
+        </div>
+
+      </div>
+    </header>
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2022 Todos los Derechos reservados:
+      <a class="text-white" href="{% static 'core/img/mantenimiento-del-sitio-web.jpg' %}">decoplants.com</a>
+    </div>
+  </footer>
+  <!-- Footer -->
+
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
